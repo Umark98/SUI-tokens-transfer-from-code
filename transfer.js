@@ -2,7 +2,7 @@ import { SuiClient } from "@mysten/sui/client";
 import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
 import { Transaction } from "@mysten/sui/transactions";
 
-const mnemonic = "acoustic mango victory near beach machine hand lecture night broccoli media name";
+const mnemonic = "your mnemonic here"; // Replace with your actual mnemonic
 async function generateWalletAddress(mnemonic) {
   const keypair = Ed25519Keypair.deriveKeypair(mnemonic);
 
@@ -55,7 +55,8 @@ async function main() {
     console.log("Your Wallet Address:", address);
 
    
-    const recipientAddress = "0x9466a055f86a2710d671a6303004f16f07e150a6a9b1fd0d41a6cb681f2df011";
+    const recipientAddress = "recipient address here"; // Replace with the recipient's address
+    // Ensure the recipient address is valid and in the correct format
     const amountToSend = 1;
 
     await transferSui(mnemonic, recipientAddress, amountToSend);
