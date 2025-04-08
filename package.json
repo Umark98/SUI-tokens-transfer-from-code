@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "test-wallet": "node transfer.js"
+  },
+  "dependencies": {
+    "@mysten/sui": "^1.26.1"
+  }
+}
