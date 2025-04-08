@@ -28,14 +28,14 @@ async function transferSui(mnemonic, recipientAddress, amount) {
     const amountInMist = Math.floor(amount * 10 ** 9);
     const sender = keypair.getPublicKey().toSuiAddress();
 
-    txb.setSender(sender); // ✅ this fixes the issue
+    txb.setSender(sender); 
 
     const [coin] = txb.splitCoins(txb.gas, [amountInMist]);
     txb.transferObjects([coin], recipientAddress);
 
     const result = await client.signAndExecuteTransaction({
       signer: keypair,
-      transaction: txb, // ✅ make sure to use `transaction`, not `transactionBlock`
+      transaction: txb, 
     });
 
     console.log("Transfer successful!");
